@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+<!-- if를 filter로
+값 변화 후 변수 할당을 map으로
+break를 take로
+축약 및 합산을 reduce로 -->
+
+<script>
+    function f2(limt, list) {
+        let acc = 0;
+        for (const a of L.filter(a => a %2, list)) {
+            const b = a * a;
+                acc += b;
+                if (--limt == 0) {
+                    break;
+                }
+        }
+    }
+    f2(3, [1, 2, 3,4,5,6,7,8,9,10]);
+</script>
+
+</body>
+</html>
