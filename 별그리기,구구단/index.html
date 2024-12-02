@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const join = sep => _.reduce(a, b) => `${a}${sep}${b}`;
+
+        _.go(
+            L.range(1,6),
+            L.map(L.range),
+            L.map(L.map( => '*')),
+            L.map(join(' ')),
+            join('\n'),
+            console.log
+        );
+
+        _.go(
+            _.range(2,10),
+            _.map(a => _.go(
+                _.range(1, 10),
+                _.map(b => `${a}x${b}=${a*b}`),
+                join('\n')
+            )),
+            join('\n\n'),
+            console.log
+        );
+
+        // _.go(
+        //     L.range(1,6),
+        //     L.map(L.range),
+        //     L.map(L.map( => '*')),
+        //     L.map(_.reduce((a,b)=> `${a}${b}`)),
+        //     _.reduce((a,b) => `${a}${b}`),
+        //     console.log
+        // );
+
+        // _.go(
+        //     L.range(1,6),
+        //     L.map(s => _.go(
+        //         L.range(s),
+        //         L.map( => '*'),
+        //         _.reduce((a,b) => `${a}${b}`)
+        //     )),
+        //     _.reduce((a,b) => `${a}\n${b}`),
+        //     console.log
+        // );
+
+    </script>
+</body>
+</html>
